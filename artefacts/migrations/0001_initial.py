@@ -8,23 +8,30 @@ class Migration(migrations.Migration):
 
     initial = True
 
-    dependencies = [
-    ]
+    dependencies = []
 
     operations = [
         migrations.CreateModel(
-            name='Artefact',
+            name="Artefact",
             fields=[
-                ('id', models.UUIDField(default=uuid.UUID('8d068a66-f088-4bca-927d-30bf9845170e'), editable=False, primary_key=True, serialize=False)),
-                ('created_at', models.DateTimeField(auto_now_add=True)),
-                ('updated_at', models.DateTimeField(auto_now=True)),
-                ('title', models.CharField(max_length=256)),
-                ('country', models.CharField(max_length=128, null=True)),
-                ('description', models.CharField(max_length=512, null=True)),
+                (
+                    "id",
+                    models.UUIDField(
+                        default=uuid.UUID("8d068a66-f088-4bca-927d-30bf9845170e"),
+                        editable=False,
+                        primary_key=True,
+                        serialize=False,
+                    ),
+                ),
+                ("created_at", models.DateTimeField(auto_now_add=True)),
+                ("updated_at", models.DateTimeField(auto_now=True)),
+                ("title", models.CharField(max_length=256)),
+                ("country", models.CharField(max_length=128, null=True)),
+                ("description", models.CharField(max_length=512, null=True)),
             ],
             options={
-                'verbose_name': 'artefact',
-                'verbose_name_plural': 'artefacts',
+                "verbose_name": "artefact",
+                "verbose_name_plural": "artefacts",
             },
         ),
     ]

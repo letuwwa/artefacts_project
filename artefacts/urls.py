@@ -4,5 +4,5 @@ from .views import ArtefactsListView
 
 
 urlpatterns = [
-    path("", ArtefactsListView.as_view()),
+    path("artefact/", ArtefactsListView.as_view()),
 ]
